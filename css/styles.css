@@ -23,7 +23,9 @@ html {
     --box-shadow: rgba(0, 0, 0, 0.12);
     --main-button-color: #188CE8;
     --box-shadow-main-button: rgba(0, 0, 0, 0.12);
+    --border-bottom-color: #ECECEC
 }
+
 
 /* встановлюэмо фон і шрифт */
 body {
@@ -40,9 +42,10 @@ body {
 
 .container {
     width: 1200px;
-    margin-left: 215px;
-    margin-right: 215px;
-        }
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
 
                 .container ul{
                     list-style: none;
@@ -110,17 +113,14 @@ body {
     margin-left: 50px;
 }
 
-
-.item {
+.underline {
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-}
+   }
 
 .contact-item {
-    display: block;
+    /* display: block;
     padding-top: 32px;
-    padding-bottom: 32px;
+    padding-bottom: 32px; */
 
     font-weight: 500;
     font-size: 14px;
@@ -139,11 +139,10 @@ body {
 }
 
 .header {
-    background-color: var(--background-color);
-    /* header line  */
+       /* header line  */
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: #ECECEC;;
+    border-bottom-color: var(--border-bottom-color);
    }
 
 .nav-logo {    
@@ -191,15 +190,21 @@ body {
 }
 
 .hero-button {
+    padding: 10px 32px;
+   
+        
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.9;
+    letter-spacing: 0.06em;
         background-color: var(--link-color);
     box-shadow: 0px 4px 4px var(--box-shadow-main-button);
+    border: none;
     border-radius: 4px;
     color: var(--background-color);
     cursor: pointer;
+   
     }
 
 .hero-button:hover,
@@ -208,6 +213,7 @@ body {
     box-shadow: 0px 4px 4px var(--box-shadow-main-button);
     border-radius: 4px
 }
+
 
 .about-backgraund {   
     background-color: var(--about-backgraund-color);
@@ -254,13 +260,16 @@ margin-bottom: 0;
 
 /* work */
 
+.work-foto {
+
+    display: block;
+        width: 100%;
+        height: auto;
+}
+
 .work {
     padding-bottom: 94px;
     padding-top:0;
-}
-
-.work-item {
-    display: block;
 }
 
 .list .work-item+.work-item {
@@ -278,13 +287,12 @@ padding-top: 94px;
     margin-left: 30px;
 }
 .team-card {  
-    display: block;
+    
         background-color: var(--background-color);
         box-shadow: 0px 1px 3px var(--box-shadow), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius: 0px 0px 4px 4px;
-        margin-bottom: 30;
-            margin-top: 0;
-}
+        margin-top: 0;
+} 
 
 
 .team-title-foto {
@@ -334,6 +342,7 @@ padding-top: 94px;
 .filter-list {
     display: flex;
     justify-content: center;
+    padding: 0;
 }
 
 .pointers {
@@ -342,6 +351,9 @@ padding-top: 94px;
     }
 
 .pointers button {
+
+     padding: 6px 22px;
+        
     background-color: var(--backgraund-team-color);
     font-weight: 500;
     border-radius: 4px;
@@ -364,6 +376,10 @@ cursor: pointer;
     margin-right: 8px;
 }
 
+            .filter-container:nth-child(5n) {
+               margin-right: 0;
+           }
+
 /* projets */
 
 .flex-container {
@@ -378,7 +394,6 @@ margin-bottom: 30px;
 
 box-sizing: border-box;
 background: var(--background-color);
-border: 1px solid var(--projet-border-color);
 
 }
 
@@ -391,20 +406,18 @@ border: 1px solid var(--projet-border-color);
 }
 
 .div-container {
-
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-
-    width: auto;
+    padding-left: 24px;
+    
+    border-right: 1px solid var(--projet-border-color);
+    border-left: 1px solid var(--projet-border-color);
+    border-bottom: 1px solid var(--projet-border-color);
 }
 
 .section-projects-title {
    
- padding-left: 24px;
- margin-bottom: 4px;
  
-
+ margin-bottom: 4px;
+ margin-top: 0;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -413,8 +426,8 @@ border: 1px solid var(--projet-border-color);
 
 .section-projects-text {
 
-    padding-left: 24px;
     margin-top: 0;
+    margin-bottom: 0;
 
     font-size: 16px;
     line-height: 1.9;
@@ -428,6 +441,8 @@ border: 1px solid var(--projet-border-color);
 }
 
 .webstudio-footer {
+
+    margin-bottom: 20px;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -453,6 +468,7 @@ border: 1px solid var(--projet-border-color);
 
 .link-footer {
     padding: 0;
+    margin: 0;
 }
 
 .link-footer a {
@@ -464,3 +480,11 @@ border: 1px solid var(--projet-border-color);
 .link-footer a:focus {
     color: var(--background-color);
 }
+
+.address-link {
+    margin-bottom: 9px;
+}
+
+        .address-link:nth-child(3n) {
+            margin-bottom: 0;
+        }
