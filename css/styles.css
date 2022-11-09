@@ -260,13 +260,12 @@ margin-bottom: 0;
 
 /* work */
 
-.work-foto {
-
+.project-container, .team-card, .list img {
     display: block;
-        width: 100%;
-        height: auto;
-}
+    width: 100%;
+    height: auto
 
+}
 .work {
     padding-bottom: 94px;
     padding-top:0;
@@ -302,7 +301,7 @@ padding-top: 94px;
     line-height: 1.2;
     text-align: center;
     color: var(--text-color);
-    margin-bottom: 10;
+    margin-bottom: 10px;
         margin-top: 0;
         padding-top: 30px;
 }
@@ -406,9 +405,8 @@ background: var(--background-color);
 }
 
 .div-container {
-    padding-left: 24px;
-    
-    border-right: 1px solid var(--projet-border-color);
+    padding: 20px 24px;
+        border-right: 1px solid var(--projet-border-color);
     border-left: 1px solid var(--projet-border-color);
     border-bottom: 1px solid var(--projet-border-color);
 }
